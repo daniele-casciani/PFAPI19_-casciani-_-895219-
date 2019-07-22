@@ -155,28 +155,7 @@ int main(){
     scanf("%s",comando);//lettura del comando successivo
   }
 
-  printf("\nStampo la lista:\n");
-  print_list(&list_ent);
-
-/*
-  printf("\nrelazioni di %s:\n", list_ent.header->persona);
-  print_listrel(&(list_ent.header->rel1));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->persona);
-  print_listrel(&(list_ent.header->next->rel1));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->next->persona);
-  print_listrel(&(list_ent.header->next->next->rel1));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->persona);
-  print_listrel(&(list_ent.header->rel2));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->persona);
-  print_listrel(&(list_ent.header->next->rel2));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->next->persona);
-  print_listrel(&(list_ent.header->next->next->rel2));*/
-
+  
 }//FINE DEL MAIN
 
 
