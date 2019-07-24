@@ -67,13 +67,12 @@ typedef struct noderel
 /*PROTOTIPI FUNZIONI*/
 void init_list(t_dlist *list);
 void insert(t_dlist *list, char *new_data);
-//void print_list(t_dlist *list);
+
 t_node *controllo(t_dlist *list, char *ent);
 void init_listrel(t_dlistrel *list);
 void insertrel(t_dlistrel *list, char *org, char *id_rel);
-//void print_listrel(t_dlistrel *list);
+
 int crel(t_dlist *list, char *id_rel, int i);
-//void stampa_matrice();
 
 void report1(t_dlist *list);
 void scambia_righe(int prima, int seconda);
@@ -171,29 +170,7 @@ int main(){
 
     scanf("%s",comando);//lettura del comando successivo
   }
-
-/*
-  printf("\nStampo la lista:\n");
-  print_list(&list_ent);
-
-  printf("\nrelazioni di %s:\n", list_ent.header->persona);
-  print_listrel(&(list_ent.header->rel[0]));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->persona);
-  print_listrel(&(list_ent.header->next->rel[0]));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->next->persona);
-  print_listrel(&(list_ent.header->next->next->rel[0]));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->persona);
-  print_listrel(&(list_ent.header->rel[1]));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->persona);
-  print_listrel(&(list_ent.header->next->rel[1]));
-
-  printf("\nrelazioni di %s:\n", list_ent.header->next->next->persona);
-  print_listrel(&(list_ent.header->next->next->rel[1]));*/
-
+    
 }//FINE DEL MAIN
 
 
@@ -280,20 +257,6 @@ void insert(t_dlist *list, char *new_data){
     list->count++;
 }
 
-/*void print_list(t_dlist *list){
-  t_node *tmp;
-    tmp = list->header;
-    int i;
-
-    for (i = 1; i <= list->count; i++)
-    {
-        printf("nodo %d: %s\n", i, tmp->persona);
-        tmp = tmp->next;
-    }
-
-    return;
-}*/
-
 t_node *controllo(t_dlist *list, char *ent){
   t_node *tmp;
     tmp = list->header;
@@ -347,20 +310,6 @@ void insertrel(t_dlistrel *list, char *org, char *id_rel){
     // aumento il contatore dei nodi della lista
     list->count++;
 }
-
-/*void print_listrel(t_dlistrel *list){
-  t_noderel *tmp;
-    tmp = list->header;
-    int i;
-
-    for (i = 1; i <= list->count; i++)
-    {
-        printf("nodo %d:\norigine :%s\nrel: %s\n", i, tmp->persona, tmp->trel);
-        tmp = tmp->next;
-    }
-
-    return;
-}*/
 
 int crel(t_dlist *list, char *id_rel, int i){
   t_node *tmp;
@@ -425,14 +374,6 @@ void scambia_righe(int prima, int seconda){
     strcpy(reportrel[seconda], appoggio);
 
 }
-
-/*void stampa_matrice(){
-    int i;
-    for(i=0; i<4; i++){
-        printf(" %s", reportrel[i]);
-        printf("\n");
-    }
-}*/
 
 void stampa_maggiore(t_dlist *list){
 
